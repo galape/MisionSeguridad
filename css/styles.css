@@ -1,25 +1,56 @@
+/* ===========================================
+   MISION SEGURIDAD - ESTILOS PRINCIPALES
+   =========================================== */
+
+/* ===========================================
+   IMPORTS Y CONFIGURACIÓN GLOBAL
+   =========================================== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+
+/* ===========================================
+   RESET Y CONFIGURACIÓN BASE
+   =========================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
 }
+
 *::-moz-selection {
   background-color: #b2b3b3;
   color: #019bdb;
 }
+
 *::selection {
   background-color: #b2b3b3;
-  color: #004d66
+  color: #004d66;
 }
+
+/* ===========================================
+   VARIABLES DE COLOR
+   =========================================== */
+:root {
+  --primary-color: #019bdb;
+  --primary-dark: #004d66;
+  --secondary-color: #2b2b2b;
+  --text-color: #3F3E3E;
+  --light-gray: #ececec;
+  --white: #ffffff;
+  --gray: #b2b3b3;
+}
+
+/* ===========================================
+   HEADER Y NAVEGACIÓN
+   =========================================== */
 .header {
-  background-color: #ececec;
+  background-color: var(--light-gray);
   display: flex;
-  align-items: center; /* Centra verticalmente */
-  justify-content: space-between; /* O "center", según el diseño */
+  align-items: center;
+  justify-content: space-between;
   padding: 10px 20px;
 }
+
 .header .logo {
   width: 350px;
   padding-left: 20px;
@@ -27,60 +58,68 @@
 
 .menu {
   height: 50px;
-  background-color: #2b2b2b;
+  background-color: var(--secondary-color);
 }
 
 .nav-link.custom-link {
-  color: #b2b3b3; 
+  color: var(--gray);
 }
 
 .nav-link.custom-link:hover {
-  color: #019bdb;
+  color: var(--primary-color);
 }
 
 .nav-link.informes {
-  color: #019bdb;
-  
+  color: var(--primary-color);
 }
+
+/* ===========================================
+   CARRUSEL Y CONTENEDORES
+   =========================================== */
 .carousel-item {
   min-height: 100vh;
 }
+
 .container {
-  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+
 .container .container:nth-child(1) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.container .container:nth-child(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-.container .container:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.container h2 {
- color: #019bdb;
- font-size: 1.5rem;
+  animation-delay: 0.2s;
 }
 
-/*Cards home */
+.container .container:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.container .container:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.container h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+/* ===========================================
+   TARJETAS Y CARDS
+   =========================================== */
 .card-title {
-  color: #019bdb;
+  color: var(--primary-color);
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   text-align: center;
 }
+
 .card {
   display: flex;
   align-items: center;
   padding-top: 20px;
   overflow: hidden;
 }
+
 .compliance-card {
-  background-color: white;
+  background-color: var(--white);
   border: 1px solid #eee;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -90,7 +129,7 @@
 }
 
 .compliance-card h3 {
-  color: #019bdb;
+  color: var(--primary-color);
   font-size: 1.1rem;
   text-transform: uppercase;
 }
@@ -100,45 +139,318 @@
 }
 
 .compliance-card .btn-warning {
-  background-color: #019bdb;
+  background-color: var(--primary-color);
   border: none;
   font-weight: bold;
   font-size: 0.85rem;
 }
 
 .compliance-card .btn-warning:hover {
-  background-color: #004d66;
+  background-color: var(--primary-dark);
 }
 
+.card-img-top-empresa {
+  width: 30%;
+  text-align: center;
+}
+
+/* ===========================================
+   BANNERS Y FONDOS
+   =========================================== */
 .bg-banner-informe {
   background-image: url('../Images/bgInforme.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.secciones {
+  background-image: url("../Images/fondosecciones.jpg");
+  object-fit: cover;
+}
+
+/* ===========================================
+   ELEMENTOS DESTACADOS
+   =========================================== */
 .destacada {
   border-width: 2px;
   transform: scale(1.02);
   transition: all 0.3s ease;
 }
+
 .destacada:hover {
   transform: scale(1.05);
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
 }
+
+/* ===========================================
+   BOTONES
+   =========================================== */
+.botones {
+  background-color: var(--primary-color);
+  border: 0;
+}
+
+.botones a:hover {
+  background-color: var(--secondary-color);
+  opacity: 0.8;
+}
+
+.botonesDesabilitados {
+  background-color: gray;
+  border: 0;
+}
+
+.botonesDesabilitados .botonesDesabilitados a:hover {
+  opacity: 0.8;
+}
+
+.botonesactivos {
+  text-decoration: none;
+  color: var(--white);
+}
+
+/* ===========================================
+   SECCIONES DE CONTENIDO
+   =========================================== */
+.titulo_seccion {
+  padding: 0px 60px 0px 60px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.titulo_seccion h1 {
+  text-align: left;
+  font-size: 48px;
+  color: var(--white);
+  padding-top: 80px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.descripcion_seccion p {
+  text-align: justify;
+  padding: 30px 50px 0px 50px;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.descripcion_seccion h3 {
+  text-align: left;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 30px 50px 0px 50px;
+}
+
+/* ===========================================
+   ACORDEÓN Y DESPLEGABLES
+   =========================================== */
+.desplegable {
+  padding: 20px;
+}
+
+.accordion {
+  --bs-accordion-inner-border-radius: 0px;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0;
+}
+
+.accordion-button {
+  color: var(--white);
+  background-color: var(--primary-dark);
+  height: 50px;
+  border-radius: 0;
+  margin: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.accordion-item {
+  border: 0px;
+}
+
+.accordion-body {
+  height: auto;
+}
+
+/* ===========================================
+   MARKETING Y CLIENTES
+   =========================================== */
+.marketing {
+  background-color: #ECEBE9;
+  margin-top: 50px;
+}
+
+.marketing p {
+  text-align: center;
+  padding: 0 20px;
+  color: var(--text-color);
+}
+
+.marketing .marcasfondo {
+  background-color: var(--white);
+  padding: 20px 0 30px;
+}
+
+.marketing .marcas-grid img {
+  max-height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.marketing .marcas-grid img:hover {
+  filter: none;
+}
+
+/* ===========================================
+   CONTACTO Y FORMULARIOS
+   =========================================== */
+.contacto {
+  width: 50rem;
+  padding: 50px;
+}
+
+.cuerpo {
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-register {
+  width: 400px;
+  background: var(--white);
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 5px;
+  color: var(--primary-color);
+}
+
+.form-register .form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid var(--primary-color);
+  font-size: 18px;
+  color: var(--white);
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register p .form-register a {
+  color: grey;
+  text-decoration: none;
+}
+
+.form-register p .form-register a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.form-register p .form-register .botons {
+  width: 100%;
+  background: var(--primary-color);
+  border: none;
+  padding: 12px;
+  color: var(--white);
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+/* ===========================================
+   MAPA
+   =========================================== */
+.mapa {
+  animation: scale-in-ver-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ===========================================
+   ELEMENTOS DE INICIO
+   =========================================== */
+.inicio {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px 20px;
+  gap: 10px;
+}
+
+.inicio__titulo a {
+  font-weight: 400;
+  color: var(--white);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.inicio__titulo a .inicio__titulo a:hover {
+  color: var(--primary-color);
+}
+
+/* ===========================================
+   FOOTER
+   =========================================== */
+footer {
+  background-color: var(--secondary-color);
+}
+
+footer .pie {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+/* ===========================================
+   CARRUSEL CREATIVO
+   =========================================== */
+#creativeCarousel .carousel-control-prev,
+#creativeCarousel .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+  height: 5rem;
+  z-index: 2000;
+  opacity: 0.8;
+}
+
+/* ===========================================
+   ELEMENTOS MISCELÁNEOS
+   =========================================== */
 .service img {
   width: 100px;
 }
 
-@-webkit-keyframes scale-in-center {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.imagenescentradas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.entrada {
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ===========================================
+   ANIMACIONES
+   =========================================== */
 @keyframes scale-in-center {
   0% {
     transform: scale(0);
@@ -150,121 +462,6 @@
   }
 }
 
-/*Botones */
-.botones {
-  background-color: #019bdb;
-  border: 0;
-}
-.botones a:hover {
- 
-  background-color: #2b2b2b;
-   opacity: 0.8;
-}
-
-.botonesDesabilitados {
-  background-color: gray;
-  border: 0;
-}
-.botonesDesabilitados .botonesDesabilitados a:hover {
-  opacity: 0.8;
-}
-
-.botonesactivos {
-  text-decoration: none;
-  color: white;
-}
-
-/*Marketing - clientes*/
-.marketing {
-  background-color: #ECEBE9;
-  margin-top: 50px;
-}
-.marketing p {
-  text-align: center;
-  padding: 0 20px;
-  color: #3F3E3E;
-}
-.marketing .marcasfondo {
-  background-color: white;
-  padding: 20px 0 30px;
-}
-.marketing .marcas-grid img {
-  max-height: 50px;
-  max-width: 100%;
-  object-fit: contain;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-.marketing .marcas-grid img:hover {
-  filter: none;
-}
-
-/*secciones*/
-.secciones {
-  background-image: url("../Images/fondosecciones.jpg");
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.titulo_seccion {
-  padding: 0px 60px 0px 60px;
-  height: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-.titulo_seccion h1 {
-  text-align: left;
-  font-size: 48px;
-  color: white;
-  padding-top: 80px;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.descripcion_seccion p {
-  text-align: left;
-  padding: 30px 50px 0px 50px;
-  color: #3F3E3E;
-  text-align: justify;
-  font-size: 1rem;
-}
-.descripcion_seccion h3 {
-  text-align: left;
-  font-size: 1.5rem;
-  color:#004d66;
-  font-family: "Source Sans Pro", sans-serif;
- padding: 30px 50px 0px 50px;
-}
-
-.card-img-top-empresa {
-  width: 30%;
-  text-align: center;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2022-9-19 10:22:30
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-/**
- * ----------------------------------------
- * animation tracking-in-expand
- * ----------------------------------------
- */
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes tracking-in-expand {
   0% {
     letter-spacing: -0.5em;
@@ -278,74 +475,6 @@
   }
 }
 
-/* Desplegable servicios */
-
-.desplegable {
-  padding: 20px;
-}
-
-.accordion {
-  --bs-accordion-inner-border-radius: 0px;
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0;
-}
-
-.accordion-button {
-  color: white;
-  background-color: #004d66;
-  height: 50px;
-  border-radius: 0;
-  margin: 10px;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 24px;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #019bdb;
-  color: white; 
-}
-
-.accordion-item {
-  border: 0px;
-}
-
-.accordion-body {
-  height: auto;
-}
-
-.imagenescentradas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.entrada {
-  -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2022-9-20 9:12:29
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-/**
- * ----------------------------------------
- * animation scale-in-ver-top
- * ----------------------------------------
- */
-@-webkit-keyframes scale-in-ver-top {
-  0% {
-    transform: scaleY(0);
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1);
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
 @keyframes scale-in-ver-top {
   0% {
     transform: scaleY(0);
@@ -359,33 +488,6 @@
   }
 }
 
-.contacto {
-  width: 50rem;
-  padding: 50px;
-}
-
-.cuerpo {
-  display: flex;
-  padding-top: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
-.mapa {
-  -webkit-animation: scale-in-ver-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: scale-in-ver-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes scale-in-ver-center {
-  0% {
-    transform: scaleY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
 @keyframes scale-in-ver-center {
   0% {
     transform: scaleY(0);
@@ -396,108 +498,31 @@
     opacity: 1;
   }
 }
-.form-register {
-  width: 400px;
-  background: white;
-  padding: 30px;
-  margin: auto;
-  margin-top: 100px;
-  border-radius: 5px;
-  color: #019bdb;
-}
-.form-register .form-register h4 {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
 
-.controls {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  border: 1px solid #019bdb;
-  font-size: 18px;
-  color: white;
-}
+/* ===========================================
+   MEDIA QUERIES
+   =========================================== */
 
-.form-register p {
-  height: 40px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 40px;
-}
-.form-register p .form-register a {
-  color: grey;
-  text-decoration: none;
-}
-.form-register p .form-register a:hover {
-  color: #019bdb;
-  text-decoration: underline;
-}
-.form-register p .form-register .botons {
-  width: 100%;
-  background: #019bdb;
-  border: none;
-  padding: 12px;
-  color: white;
-  margin: 16px 0;
-  font-size: 16px;
-}
-
-.inicio {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding: 20px 20px;
-  gap: 10px;
-}
-
-.inicio__titulo a {
-  font-weight: 400;
-  color: white;
-  font-size: 16px;
-  text-decoration: none;
-}
-.inicio__titulo a .inicio__titulo a:hover {
-  color: #019bdb;
-}
-
-footer {
-  background-color: #2b2b2b;
-}
-footer .pie {
-  font-size: 14px;
-  font-weight: 200;
-}
-
-#creativeCarousel .carousel-control-prev,
-#creativeCarousel .carousel-control-next {
-  top: 50%;
-  transform: translateY(-50%);
-  width: 5%;        /* ancho reducido */
-  height: 5rem;     /* altura de flecha */
-  z-index: 2000;    /* para que esté arriba de todo */
-  opacity: 0.8;
-}
-
-
+/* Tablet y dispositivos medianos */
 @media screen and (max-width: 768px) {
   /* Header y navegación */
   .header {
     flex-direction: column;
   }
+  
   .seccion-con-margen {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
+  
   .menu {
     width: 100%;
-    justify-content: space-between; /* Distribuye logo y botón hamburguesa */
+    justify-content: space-between;
     padding: 0 20px;
   }
 
   .navbar-toggler {
-    margin-left: auto; /* Empuja el botón hacia la derecha */
+    margin-left: auto;
   }
 
   .navbar-toggler:focus {
@@ -506,10 +531,10 @@ footer .pie {
 
   .navbar-collapse {
     position: absolute;
-    top: 100%; /* Hace que aparezca debajo del navbar-toggler */
+    top: 100%;
     left: 0;
     width: 100%;
-    background-color: #2b2b2b;
+    background-color: var(--secondary-color);
     z-index: 1000;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -556,37 +581,39 @@ footer .pie {
     position: absolute;
   }
 
-
   /* Otros elementos */
   .marcas {
     display: flex;
     justify-content: center;
   }
-   #creativeCarousel .carousel-caption {
-    width: 90% !important;        /* Ocupa casi todo el ancho, pero con margen */
-    padding: 3rem 1rem 1rem 1rem !important;  /* Menos padding arriba */
-    background-color: rgba(0, 0, 0, 0.6) !important; /* Un poco más opaco para mejor legibilidad */
+  
+  #creativeCarousel .carousel-caption {
+    width: 90% !important;
+    padding: 3rem 1rem 1rem 1rem !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
     align-items: flex-start !important;
   }
+  
   #creativeCarousel .carousel-caption .btn {
-    white-space: normal; /* Que el botón pueda ocupar varias líneas si hace falta */
+    white-space: normal;
     margin-bottom: 1rem;
   }
+  
   #creativeCarousel .carousel-control-prev,
   #creativeCarousel .carousel-control-next {
-
     top: 70%;
     transform: translateY(0);
   }
-
-
 }
 
+/* Dispositivos móviles pequeños */
 @media screen and (max-width: 480px) {
   .destacado {
     height: 60vh;
   }
 }
+
+/* Dispositivos grandes */
 @media (min-width: 992px) {
   .imagencarrusel {
     height: 70vh;
