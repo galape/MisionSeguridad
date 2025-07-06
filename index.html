@@ -125,41 +125,76 @@
 
     
 
-    <!-- Tarjeta destacada tipo banner -->
-   <div class="col-12 mb-4">
-  <div class="card bg-banner-informe text-white shadow-lg border-0 rounded-4 overflow-hidden p-0">
-    <div class="d-flex flex-wrap align-items-center justify-content-end" style="min-height: 80px; padding: 1.5rem 2rem;">
-
-      <!-- Espaciador para empujar contenido a la derecha -->
-      <div class="flex-grow-1"></div>
-
-      <!-- Contenido alineado a la derecha -->
-      <div class="d-flex align-items-center" style="gap: 2rem;">
-        <!-- Texto -->
-        <div class="text-end" style="max-width: 400px;">
-          <h2 class="fw-bold fs-1 mb-2">
-            Transacciones<span class="text-warning fw-normal"> SEGURAS</span> 
-          </h2>
-          <p class="fs-4 mb-0">
-            Consulte un <span class="text-warning fw-bold">Informes comerciales</span><br> de una persona o empresa
-          </p>
-        </div>
-
-        <!-- Precio y botón -->
-        <div class="text-end text-white" style="min-width: 200px;">
-          <p class="mb-0 fs-6 text-white-50">1 Informe</p>
-          <h2 class="fw-bold fs-1 mb-1">$12.682</h2>
-          <p class="mb-0 fs-6">Precio con IVA</p>
-          <p class="text-white-50 fs-6 mb-3">Sin IVA <strong>$10.481</strong></p>
-          <a href="javascript:void(0)" onclick="comprarInforme()" class="btn btn-success fw-bold px-4 py-2">
-            <i class="fab fa-whatsapp"></i> COMPRAR INFORME
-          </a>
+        <!-- Banner destacado de informes comerciales -->
+    <div class="col-12 mb-4">
+      <div class="card border-0 rounded-4 overflow-hidden shadow-lg banner-informes">
+        <div class="row g-0">
+          <!-- Lado izquierdo - Información -->
+          <div class="col-lg-8 p-3 p-lg-4">
+            <div class="d-flex flex-column h-100 justify-content-center">
+              <!-- Badge de oferta -->
+              <span class="badge bg-warning text-dark fw-bold mb-2 banner-informes-badge">
+                <i class="fas fa-star me-1"></i> SERVICIO PREMIUM
+              </span>
+              
+              <!-- Título principal -->
+              <h2 class="text-white fw-bold mb-2 banner-informes-titulo">
+                Informes Comerciales
+                <span class="d-block text-warning banner-informes-subtitulo">CONFIDENCIALES Y LEGALES</span>
+              </h2>
+              
+              <!-- Descripción -->
+              <p class="text-white-75 fs-6 mb-3 banner-informes-descripcion">
+                Obtenga información detallada sobre personas o empresas con respaldo legal y máxima confidencialidad.
+              </p>
+              
+              <!-- Beneficios -->
+              <div class="d-flex flex-wrap gap-2 mb-0">
+                <span class="badge bg-success bg-opacity-25 text-success border border-success banner-informes-beneficio">
+                  <i class="fas fa-shield-alt me-1"></i> 100% Legal
+                </span>
+                <span class="badge bg-info bg-opacity-25 text-info border border-info banner-informes-beneficio">
+                  <i class="fas fa-clock me-1"></i> 24h Entrega
+                </span>
+                <span class="badge bg-warning bg-opacity-25 text-warning border border-warning banner-informes-beneficio">
+                  <i class="fas fa-lock me-1"></i> Confidencial
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Lado derecho - Precio y CTA -->
+          <div class="col-lg-4 p-3 p-lg-4 banner-informes-overlay">
+            <div class="text-center text-white h-100 d-flex flex-column justify-content-center">
+              <!-- Precio -->
+              <div class="mb-3">
+                <p class="text-white-50 mb-1 small">Precio por informe</p>
+                <div class="d-flex align-items-baseline justify-content-center mb-1">
+                  <span class="text-white-50 fs-6">$</span>
+                  <span class="text-white fw-bold banner-informes-precio">12.682</span>
+                  <span class="text-white-50 fs-6 ms-1">ARS</span>
+                </div>
+                <p class="text-white-50 small mb-0">IVA incluido</p>
+                <p class="text-warning small fw-bold">Sin IVA: $10.481</p>
+              </div>
+              
+              <!-- Botón CTA -->
+              <a href="javascript:void(0)" onclick="comprarInforme()" 
+                 class="btn btn-warning fw-bold px-4 py-2 text-dark shadow-sm banner-informes-boton">
+                <i class="fab fa-whatsapp me-2"></i>
+                SOLICITAR AHORA
+              </a>
+              
+              <!-- Garantía -->
+              <p class="text-white-50 small mt-2 mb-0">
+                <i class="fas fa-check-circle text-success me-1"></i>
+                Respuesta en menos de 1 hora
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</div>
 
 
 

@@ -432,6 +432,57 @@ footer .pie {
 }
 
 /* ===========================================
+   BANNER DE INFORMES COMERCIALES
+   =========================================== */
+.banner-informes {
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.6) 0%, rgba(52, 73, 94, 0.6) 100%), url('../Images/bgInforme.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-informes-overlay {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.banner-informes-badge {
+  width: fit-content;
+  font-size: 1rem;
+}
+
+.banner-informes-titulo {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.banner-informes-subtitulo {
+  font-size: 0.8em;
+}
+
+.banner-informes-descripcion {
+  max-width: 500px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.banner-informes-beneficio {
+  font-size: 0.9rem;
+}
+
+.banner-informes-precio {
+  font-size: 3rem;
+}
+
+.banner-informes-boton {
+  transition: all 0.3s ease;
+}
+
+.banner-informes-boton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===========================================
    ELEMENTOS MISCELÁNEOS
    =========================================== */
 .service img {
